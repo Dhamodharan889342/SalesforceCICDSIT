@@ -1,0 +1,16 @@
+<project name="PostGCreateTable" basedir="." default = "crateTable">
+
+<property name="sql.driver" value="org.git.mm.mysql.Driver">
+<property name="sql.url" value="jdbc:mysql://10.115.195.155"/>
+  <property name="sql.user" value="root"/>
+  <property name="sql.pass" value="Data@2021"/>
+
+  <target name="createTables">
+  <sql driver="${sql.driver}" url="${sql.url}" userid="${sql.user}" 
+    password="${sql.pass}" >
+  <transaction src="client.sql"/>
+  <transaction src="project.sql"/>
+  </sql>
+  </target>
+
+</project>
