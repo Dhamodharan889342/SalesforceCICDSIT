@@ -8,8 +8,7 @@
   <target name="createTables">
   <sql driver="${sql.driver}" url="${sql.url}" userid="${sql.user}" 
     password="${sql.pass}" >
-  <transaction src="client.sql"/>
-  <transaction src="project.sql"/>
+  <transaction src="salesforce-db.sql"/>
   </sql>
   </target>
 
